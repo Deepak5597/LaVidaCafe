@@ -1,0 +1,21 @@
+================
+create table mp (id int auto_increment primary key,username varchar(255),email varchar(255),password varchar(255),contact varchar(255),designation varchar(255),imagename varchar(255) default 'manager.png');
+create table ap (id int auto_increment primary key,username varchar(255),email varchar(255),password varchar(255),contact varchar(255),designation varchar(255),imagename varchar(255) default 'admin.png');
+create table kp (id int auto_increment primary key,username varchar(255),email varchar(255),password varchar(255),contact varchar(255),designation varchar(255),imagename varchar(255) default 'kitchen.png',status varchar(255) default 'inactive',ordertaken varchar(255) default 'false',totalorder int default 0);
+create table cp (id int auto_increment primary key,username varchar(255),email varchar(255),password varchar(255),contact varchar(255),designation varchar(255) default 'customer',imagename varchar(255) default 'customer.png');
+
+create table fp(id int auto_increment primary key,name varchar(255),type varchar(255),country varchar(255),avquantity int, price int,color varchar(255),imagename varchar(255),taste varchar(255),campany_price int);
+
+===========
+insert into ap values(1,'xyz','zyz@gmail.com','xyz','1234567890','admin','admin.jpg');
+insert into fp values(1,'Cheese Burger','Breakfast','Chinese',10,100,'green','cheeseburger.jpg','salty',50);
+insert into fp values(2,'Cocoabite','Breakfast','Western',5,40,'green','cocoabite.jpg','sweet',20);
+insert into fp values(3,'Hot Choco','Breakfast','Western',9,90,'green','hotchoco.jpg','sweet',60);
+insert into fp values(4,'Meat Balls','Lunch','Italian',12,110,'red','mb.jpg','spicy',80);
+insert into fp values(5,'Orange Juice','Breakfast','Drink',32,40,'green','orange.jpg','sweet',25);
+insert into fp values(6,'Shahi Panner','Dinner','Indian',19,170,'green','shahi_paneer.jpg','salty',100);
+===========
+
+create table orderdetail(tablenumber varchar(255),name varchar(255),quantity int, price varchar(255),company_price varchar(255), status varchar(255), paystatus varchar(255),takenby varchar(255));
+
+create table profit(id int auto_increment primary key, preprofit varchar(255) , addedprofit varchar(255), newprofit varchar(255));
